@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,500;6..12,700;6..12,800&display=swap');
+
+:root{
+    font-size: 62.5%;
+    --light-gray: #ccc;
+    --btn-background-color:#d4d4d44d;
+    --neon-green: rgb(49, 151, 151);
+    --black: #131111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.6rem;
+    margin-inline: auto;
+    width: min(95%, 90%);
+    font-family: 'Nunito Sans', sans-serif;
+    margin-block: 3rem;
+}
+
+img{
+max-width: 100%;
+height: auto;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-size: cover;
+font-style: italic;
+shape-margin: 0.75rem;
+}
+
+.search-icon{
+    width: 22px;
+    position: absolute;
+top: 6px;
+left: 12px;
+cursor: text;
+}
+
+.close-btn-icon{
+    width: 23px;
+    position: absolute;
+top: 5px;
+right: 12px;
+cursor: pointer;
+}
+
+.search-filter-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.close-btn{
+all: unset;
+display: none;
+}
+
+.form :is(input){
+     width: 45vw;
+    height: 32px;
+    border: 1px solid var(--light-gray);
+    border-radius: 3px;
+    color: var(--black);
+    text-indent: 4.2rem;
+}
+
+.form :is(input)::placeholder{
+    text-indent: 4.2rem;
+}
+
+.search-input:is(focus-visible, :focus-within) {
+    outline-color: var(--neon-green);
+}
+.search-input:is(focus-visible, :focus-within) + .close-btn{
+    display: block;
+}
+.add-button :is(button){
+    all:unset;
+    cursor: pointer;
+    background-color: var(--btn-background-color);
+    color: var(--neon-green);
+    font-weight: 600;
+    padding: 0.4em 0.6em;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    
+}
+
+.form{
+    position: relative;
+}
+
